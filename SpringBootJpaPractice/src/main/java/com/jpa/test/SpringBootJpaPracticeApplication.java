@@ -70,11 +70,18 @@ public class SpringBootJpaPracticeApplication {
 //		itr.forEach(user1 -> System.out.println(user1));
 		
 		//Delete user by id
-		userRepository.deleteById(6);
+//		userRepository.deleteById(6);
 		
 		//Print users
-		Iterable<User> itr = userRepository.findAll();
-		itr.forEach(user1 -> System.out.println(user1));
+//		Iterable<User> itr = userRepository.findAll();
+//		itr.forEach(user1 -> System.out.println(user1));
+		
+		//Custom Finder methods or Derived Query methods
+//		List<User> results = userRepository.findByName("Adarsh Shivhare");
+//		results.forEach(user -> System.out.println(user));
+		
+		List<User> results = userRepository.findByNameAndCity("Adarsh Shivhare", "Korba");
+		results.forEach(user -> System.out.println(user));
 	}
 
 }
