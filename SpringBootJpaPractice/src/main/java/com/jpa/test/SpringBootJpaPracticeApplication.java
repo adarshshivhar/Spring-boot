@@ -80,8 +80,26 @@ public class SpringBootJpaPracticeApplication {
 //		List<User> results = userRepository.findByName("Adarsh Shivhare");
 //		results.forEach(user -> System.out.println(user));
 		
-		List<User> results = userRepository.findByNameAndCity("Adarsh Shivhare", "Korba");
-		results.forEach(user -> System.out.println(user));
+//		List<User> results = userRepository.findByNameAndCity("Adarsh Shivhare", "Korba");
+//		results.forEach(user -> System.out.println(user));
+		
+		//@Query
+		//JPQL - Java Persistence Query Language.
+		//Native - SQL Query language. 
+		// For complex query.
+		
+		//JPQL
+//		List<User> res = userRepository.getAllUser();
+//		res.forEach(user -> System.out.println(user));
+		
+//		List<User> res = userRepository.getUserByName("Adarsh Shivhare");
+//		res.forEach(user -> System.out.println(user));
+		
+//		List<User> res = userRepository.getUserByNameAndCity("Adarsh Shivhare", "Korba");
+//		res.forEach(user -> System.out.println(user));
+		
+		//Native Query
+		userRepository.getUsers().forEach(u -> System.out.println(u));
 	}
 
 }
